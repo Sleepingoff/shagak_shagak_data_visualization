@@ -35,7 +35,7 @@ import Triangle from "./pages/canvas/Triangle";
 import Sin from "./pages/canvas/Sin";
 import SunriseSunset from "./pages/canvas/SunriseSunset";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: <App />,
@@ -168,6 +168,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes, {
+  basename: import.meta.env.BASE_URL,
+});
 
 export default router;
